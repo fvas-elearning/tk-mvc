@@ -1,7 +1,10 @@
 <?php
+
 namespace Tk\Controller;
 
+use Dom\Template;
 use Tk\ConfigTrait;
+use Tk\Request;
 
 /**
  * @author Michael Mifsud <info@tropotek.com>
@@ -11,9 +14,9 @@ use Tk\ConfigTrait;
 abstract class Iface extends \Dom\Renderer\Renderer implements \Dom\Renderer\DisplayInterface
 {
     use ConfigTrait;
-    
+
     /**
-     * @var \Tk\Controller\Page
+     * @var Page
      */
     protected $page = null;
 
@@ -28,22 +31,12 @@ abstract class Iface extends \Dom\Renderer\Renderer implements \Dom\Renderer\Dis
     protected $showTitle = true;
 
 
-
-    /**
-     * Iface constructor.
-     * @deprecated
-     */
-    public function __construct()
-    {
-
-    }
-
     /**
      * @return string
      */
     public function getDefaultTitle()
     {
-        /** @var \Tk\Request $request */
+        /** @var Request $request */
         $request = $this->getConfig()->getRequest();
         if ($request) {
             $routeName = $request->attributes->get('_route');
@@ -54,17 +47,14 @@ abstract class Iface extends \Dom\Renderer\Renderer implements \Dom\Renderer\Dis
 
     /**
      * Get a new instance of the page to display the content in.
+     * NOTE: Override to load your own page objects
      *
-     * NOTE: This is the default, override to load your own page objects
-     *
-     * @return \Tk\Controller\Page
+     * @return Page
      */
     public function getPage()
     {
         if (!$this->page) {
-            // Create a default page
             $this->page = new Page($this->getConfig()->getSitePath() . $this->getConfig()->get('template.public'));
-            $this->page->setController($this);
         }
         return $this->page;
     }
@@ -82,7 +72,7 @@ abstract class Iface extends \Dom\Renderer\Renderer implements \Dom\Renderer\Dis
 
     /**
      * For compatibility
-     * @return \Dom\Template
+     * @return Template
      */
     public function show()
     {
@@ -127,7 +117,5 @@ abstract class Iface extends \Dom\Renderer\Renderer implements \Dom\Renderer\Dis
         $this->showTitle = $showTitle;
         return $this;
     }
-
-
 
 }

@@ -1,6 +1,64 @@
 #CHANGELOG#
 
-Ver 3.2.16 [2020-11-23]:
+Ver 3.2.26 [2021-01-22]:
+-------------------------------
+
+
+Ver 3.2.24 [2020-11-26]:
+-------------------------------
+
+
+Ver 3.2.22 [2020-11-25]:
+-------------------------------
+
+
+Ver 3.2.20 [2020-11-24]:
+-------------------------------
+
+
+Ver 3.2.18 [2020-11-23]:
+-------------------------------
+  - Tagging and releasing branch `3.2` with version `3.2.14`.
+  - fixed a few anying error emails and DB bugs
+  - Tagging and releasing branch `3.2` with version `3.2.12`.
+  - Tagging and releasing branch `3.2` with version `3.2.10`.
+  - Tagging and releasing branch `3.2` with version `3.2.8`.
+  - Tagging and releasing branch `3.2` with version `3.2.6`.
+  - Tagging and releasing branch `3.2` with version `3.2.4`.
+  - Tagging and releasing branch `3.2` with version `3.2.2`.
+  - Tagging and releasing branch `3.2` with version `3.2.0`.
+
+
+Ver 3.2.14 [2020-09-14]:
+-------------------------------
+  - fixed a few anying error emails and DB bugs
+
+
+Ver 3.2.12 [2020-09-10]:
+-------------------------------
+
+
+Ver 3.2.10 [2020-05-28]:
+-------------------------------
+
+
+Ver 3.2.8 [2020-05-28]:
+-------------------------------
+
+
+Ver 3.2.6 [2020-05-28]:
+-------------------------------
+
+
+Ver 3.2.4 [2020-05-26]:
+-------------------------------
+
+
+Ver 3.2.2 [2020-05-21]:
+-------------------------------
+
+
+Ver 3.2.0 [2020-03-11]:
 -------------------------------
 
 
